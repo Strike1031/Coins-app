@@ -81,7 +81,7 @@ const CoinDetails = () => {
                 </span>
                 <div
                   className='aa-Autocomplete'
-                  role='combobox'
+                  role='comboBox'
                   aria-expanded='false'
                   aria-haspopup='listbox'
                   aria-labelledby='autocomplete-27-label'
@@ -144,7 +144,7 @@ const CoinDetails = () => {
                   <div className='flex flex-shrink-0 h-5 w-5'>
                     <NextImage
                       alt=''
-                      src='/images/coinDetails/wrapped-avax.png'
+                      src='/images/coinDetails/47cxwsny72lbsrc1t48r38v9hxoo.png'
                       width='25'
                       height='25'
                       decoding='async'
@@ -159,7 +159,1247 @@ const CoinDetails = () => {
             </div>
           </nav>
         </div>
-        <div className='flex flex-col min-w-0 overflow-hidden text-gray-400'>
+        <div className='border-r fixed hidden inset-y-0 min-h-0 overflow-y-hidden scrollbar-thin top-[88px] w-14 sm:block dark:bg-black dark:border-gray-800 hover:overflow-y-auto'>
+          <nav className='align-top justify-start overflow-y-auto p-2 scrollbar-thin space-y-1'>
+            <a
+              href='https://www.geckoterminal.com/watchlist'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='h-6 mr-0 w-6' aria-hidden='true'>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      viewBox='0 0 20 20'
+                      fill='currentColor'
+                      aria-hidden='true'
+                      className='fill-star-yellow'
+                    >
+                      <path d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z'></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/arbitrum/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/b5pxe6whp95sgklpatj9rfkkj4ji.svg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/arbitrum_nova/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/xiqrdcmzicnnr4fawm12dcp0g3kf.svg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/astr/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/rm87elm746l9vgxyq88dml7x1udh.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/aurora/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/8bnknlwon3wi0np7txxd99uxol2k.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/avax/pools'
+              className='bg-gray-600/50 flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 text-white hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/47cxwsny72lbsrc1t48r38v9hxoo.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/bitgert/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/gtt49ljjjyojwtgshpe9t7bnmrhi.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/bsc/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/rk3bsa3pl5h3h7frn6etl1v4opsz.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/boba/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/lmlla15z97y66ceca9e5nbb0lgg5.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/canto/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/6p7bfea2bd6ifatgssykqzw5p574.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/celo/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/eo2pnrjpolnmkjz9mqg49m2llvrh.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/clover_finance/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/gb0afhp6drbqc8a0ucy49z0hscec.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/cfx/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/qp51sy0ufgluirujbend31p1f1u7.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/cro/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/6umwmj6uoeqxmfl6odnqx3hy3acc.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/cube_network/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/53ondrgcmdfb7w34qi5y9w6h45tk.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/dfk/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/6v3kvp820kr4xvvdiz4sgw7g07tq.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/dogechain/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/3kt9opfq8r5eig5s9tg5etoa1xdx.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/echelon/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/vg7rcnqhcnh0jsreltplknd0babd.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/ela/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/6pa821cyq6tu87l9375hnv1dh0tg.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/nrg/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/7p7fo7ielfncyx9lxugq0s0bf72b.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/eth/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/bqu4tzciplldg2ojzx6ww5hd09ii.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/ethereum_classNameic/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/t1f73zr4fk5i7negdktb8qd6u6aq.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/ethereumfair/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/lznpgj67yx7dstbdyhvqvoxh5omd.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/ethw/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/o3mkgufpqi9wt4x9lu2dqlhopvir.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/evmos/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/cu7rb0tormsx93qyx4ggb0lii355.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/ftm/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/uvjtu2wc4pkwdqvoqkegb6zzib3n.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/findora/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/4wxhxn53o3dzay0dailkk0cm67pb.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/fuse/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/mnn4d9yihx1nvd17uxdlqekflukw.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/xdai/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/2r4p3wwade58b92610xv46bef838.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/godwoken/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/edd6hj05xdckak4n977danr7051h.svg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/one/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/d21nu5y6v36xg1k0b2h6m6kiorxe.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/hsc/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/gewd0xos8d6lmqks1iqpesuzqzh6.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/heco/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/pyefqee8axmmadetm76j3vae1wdz.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/iotx/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/6baqslljjd54lb8rloyg0a30s0mi.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/kai/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/c27sibb2pyik3jw55hzerw7fshj4.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/kava/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/9lx52nbtjvtdzgr62jx4hxv5ui1o.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/kekchain/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/w5uzq9iq0wk8mordhcc6n0uyavq0.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/klaytn/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/jau52fbj8581xzasvr70vpjjnuzm.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/kcc/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/92qqv1zcvsa94mz4dx2sm46cn49j.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/mtr/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/0rrmdg4oroqkpswwmk4c9mljdh3k.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/metis/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/83e41lwqghcvo6lv0p11o2v2370j.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/milkada/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/tq5jr2dn9hom0fymvvtd846c5zeg.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/glmr/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/eq0poqyieb7md6yynb4eveplp7dp.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/movr/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/pvvr0s3uxspq23w0edm2xhyss8zu.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/oasis/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/rucvydmropv3zq78yrru9l7xhnib.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/oec/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/f7x1b66v3g4s7uh6wd2osnkv9ssy.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/optimism/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/ugp5lpdi5adfizqj66tam5yl1zfm.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/polygon_pos/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/dau5esiwuf9jj9r0jchj9qgdhy8g.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/redlight_chain/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/bstairgtyh7jgynhj2g1mqciityk.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/ronin/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/dh5x7l6vsoccgge3bcx6hjqlpq95.svg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/shibchain/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/s1chvhnfk4ned8kf37vicizfmcyq.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/sdn/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/e1j6djmgvdxtqt8hfqg6no5w77an.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/bch/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/ffk9srcy5zwjl7wj7tpynh961yyt.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/solana/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/ttmzp815hr8hanm6bwxp549dq9rp.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/songbird/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/9w3lzd9lr4tu9kvwnke5ysptwwc6.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/step-network/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/8kw8l0036yg0g2tuur0ao2felq4n.jpg'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/sxn/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/58tuicteq1ccwzyfynqcsy4drdoj.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/sys/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/lxvbcx0wchxytg1to4rfs9d5d76l.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/tlos/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/rqpxwj9akldvcveaf8mq0b0t1czd.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/terra/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/16qi25by7w5af4lbtntk9altpr0o.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/thundercore/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/pz9kni4ylr1c59cd6u9yiul8jbuh.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/tombchain/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/84p4hmm3v4mqzjaiplps6hvzb6q6.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/tomochain/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/9r2rzkm28bpd3xjmxdt41mgqvfz9.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/velas/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/fejak8s0thn4yswe1qbjijkehnxi.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+            <a
+              href='https://www.geckoterminal.com/wan/pools'
+              className='flex font-medium group items-center px-2 py-2 rounded-md text-base text-gray-300 hover:bg-gray-600/30 hover:text-white'
+            >
+              <span className='inline-block'>
+                <div>
+                  <div className='flex flex-shrink-0 h-6 mr-0 w-6'>
+                    <NextImage
+                      alt=''
+                      src='/images/coinDetails/oq5q9xux1xzf17d9ssi0pylt7f4h.png'
+                      width='25'
+                      height='25'
+                      decoding='async'
+                      data-nimg='future'
+                    />
+                  </div>
+                </div>
+              </span>
+            </a>
+          </nav>
+        </div>
+        <div className='flex flex-col min-w-0 overflow-hidden text-gray-400 sm:ml-14'>
           <main>
             <div className='pb-10 px-0'>
               <div className='grid grid-cols-12 md:divide-gray-800 md:divide-x'>
@@ -281,15 +1521,15 @@ const CoinDetails = () => {
                       </div>
                     </div>
                     <div className='my-2 lg:my-4'>
-                      <h6 className='mb-1 text-gray-400'>
+                      <h1 className='mb-1 text-gray-400'>
                         <span
                           className='block max-w-full truncate'
                           title='Wrapped AVAX Price (WAVAX)'
                         >
                           Wrapped AVAX Price (WAVAX)
                         </span>
-                      </h6>
-                      <div className='flex gap-2 items-center mb-2 text-2xl text-white md:gap-3 lg:mb-4'>
+                      </h1>
+                      <div className='flex gap-2 items-center mb-2 text-3xl text-white md:gap-3 lg:mb-4'>
                         <span id='pool-price-display'>$16.77</span>
                         <span className='bg-red-600 font-medium inline-flex items-center leading-none px-2.5 py-1 rounded-full text-red-100 text-xs'>
                           -2.73%
@@ -311,11 +1551,7 @@ const CoinDetails = () => {
                               aria-hidden='true'
                               width='20'
                               height='20'
-                              style={{
-                                strokeWidth: '2',
-                                stroke: '#fc6',
-                                fill: 'transparent',
-                              }}
+                              className='fill-transparent stroke-2 stroke-star-yellow'
                             >
                               <path d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z'></path>
                             </svg>
@@ -330,7 +1566,7 @@ const CoinDetails = () => {
                             <div className='flex flex-shrink-0'>
                               <NextImage
                                 alt=''
-                                src='/images/coinDetails/wrapped-avax.png'
+                                src='/images/coinDetails/47cxwsny72lbsrc1t48r38v9hxoo(1).png'
                                 width='15'
                                 height='15'
                                 decoding='async'
@@ -348,7 +1584,7 @@ const CoinDetails = () => {
                             <div className='flex flex-shrink-0'>
                               <NextImage
                                 alt=''
-                                src='/images/coinDetails/traderJoe.png'
+                                src='/images/coinDetails/bdeeu5zvptlz3favfc8n8c3bmynn.png'
                                 width='15'
                                 height='15'
                                 decoding='async'
@@ -478,7 +1714,7 @@ const CoinDetails = () => {
                             Pair
                           </span>
                           <div className='col-span-3 flex gap-2 items-center'>
-                            <span className='bg-gray-400/30 flex font-medium gap-1 inline-flex items-center leading-none px-3 py-1 rounded rounded-full text-gray-200 text-sm'>
+                            <span className='bg-gray-400/30 flex font-medium gap-1 inline-flex items-center items-center leading-none px-3 py-1 rounded rounded-full text-gray-200 text-sm'>
                               <div>0xf40...8adb</div>
                             </span>
                             <div className='flex gap-0.5 items-center'>
@@ -530,7 +1766,7 @@ const CoinDetails = () => {
                               <div className='flex flex-shrink-0'>
                                 <NextImage
                                   alt=''
-                                  src='/images/coinDetails/wrapped-avax.png'
+                                  src='/images/coinDetails/wrapped-avax(1).png'
                                   width='15'
                                   height='15'
                                   decoding='async'
@@ -606,7 +1842,7 @@ const CoinDetails = () => {
                               <div className='flex flex-shrink-0'>
                                 <NextImage
                                   alt=''
-                                  src='/images/coinDetails/USD_Coin_icon.png'
+                                  src='/images/coinDetails/USD_Coin_icon(1).png'
                                   width='15'
                                   height='15'
                                   decoding='async'
@@ -681,7 +1917,7 @@ const CoinDetails = () => {
                               <div className='flex flex-shrink-0'>
                                 <NextImage
                                   alt=''
-                                  src='/images/coinDetails/traderJoe.png'
+                                  src='/images/coinDetails/bdeeu5zvptlz3favfc8n8c3bmynn.png'
                                   width='16'
                                   height='16'
                                   decoding='async'
@@ -988,10 +2224,10 @@ const CoinDetails = () => {
                     >
                       <div className='h-full'>
                         <div className='TVChartContainer h-full min-w-full'>
-                          {/* <iframe
+                          <iframe
                             id='tradingview_fd83c'
                             name='tradingview_fd83c'
-                            src='/images/coinDetails/en-tv-chart.html'
+                            src='/images/coinDetails/en-tv-chart.9df149da.html'
                             title='Financial Chart'
                             frameBorder='0'
                             // allowTransparency='true'
@@ -1003,7 +2239,7 @@ const CoinDetails = () => {
                               width: '100%',
                               height: '100%',
                             }}
-                          ></iframe> */}
+                          ></iframe>
                         </div>
                       </div>
                     </div>
@@ -2433,7 +3669,7 @@ const CoinDetails = () => {
                               >
                                 <a
                                   className='border border-gray-200 font-medium inline-flex items-center pl-2 pointer-events-none px-4 py-2 relative rounded-l-md text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
-                                  href='/history'
+                                  href='https://www.geckoterminal.com/avax/pools/0xf4003f4efbe8691b60249e6afbd307abe7758adb'
                                 >
                                   <svg
                                     xmlns='http://www.w3.org/2000/svg'
@@ -2452,37 +3688,37 @@ const CoinDetails = () => {
                                 </a>
                                 <a
                                   className='bg-violet-50 border border-violet-500 font-medium inline-flex items-center pointer-events-none px-4 py-2 relative text-sm text-violet-600 z-10 dark:bg-gray-600 dark:border-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:text-gray-200 hover:bg-gray-50'
-                                  href='/history'
+                                  href='https://www.geckoterminal.com/avax/pools/0xf4003f4efbe8691b60249e6afbd307abe7758adb'
                                 >
                                   1
                                 </a>
                                 <a
                                   className='border border-gray-200 font-medium inline-flex items-center px-4 py-2 relative text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
-                                  href='/history'
+                                  href='https://www.geckoterminal.com/avax/pools/0xf4003f4efbe8691b60249e6afbd307abe7758adb'
                                 >
                                   2
                                 </a>
                                 <a
                                   className='border border-gray-200 font-medium inline-flex items-center px-4 py-2 relative text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
-                                  href='/history'
+                                  href='https://www.geckoterminal.com/avax/pools/0xf4003f4efbe8691b60249e6afbd307abe7758adb'
                                 >
                                   3
                                 </a>
                                 <a
                                   className='border border-gray-200 font-medium inline-flex items-center pointer-events-none px-4 py-2 relative text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
-                                  href='/history'
+                                  href='https://www.geckoterminal.com/avax/pools/0xf4003f4efbe8691b60249e6afbd307abe7758adb'
                                 >
                                   ...
                                 </a>
                                 <a
                                   className='border border-gray-200 font-medium inline-flex items-center px-4 py-2 relative text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
-                                  href='/history'
+                                  href='https://www.geckoterminal.com/avax/pools/0xf4003f4efbe8691b60249e6afbd307abe7758adb'
                                 >
-                                  10
+                                  717
                                 </a>
                                 <a
                                   className='border border-gray-200 font-medium inline-flex items-center pr-2 px-4 py-2 relative rounded-r-md text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
-                                  href='/history'
+                                  href='https://www.geckoterminal.com/avax/pools/0xf4003f4efbe8691b60249e6afbd307abe7758adb'
                                 >
                                   Next
                                   <svg
