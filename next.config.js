@@ -27,8 +27,7 @@ module.exports = {
     domains: ['cryptocompare.com', 'www.cryptocompare.com'],
   },
   reactStrictMode: true,
-
-  // Uncoment to add domain whitelist
+   // Uncoment to add domain whitelist
   // images: {
   //   domains: [
   //     'res.cloudinary.com',

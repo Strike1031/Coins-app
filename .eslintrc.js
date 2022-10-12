@@ -15,7 +15,8 @@ module.exports = {
   rules: {
     'no-unused-vars': 'off',
     'no-console': 'warn',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off', 
+    '@typescript-eslint/no-var-requires': 0, //Mine:Comment 
     '@next/next/no-document-import-in-page': 'off',
     '@next/next/no-img-element': 'off',
     // Sort
