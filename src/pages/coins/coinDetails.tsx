@@ -195,7 +195,7 @@ const CoinDetails = () => {
                         </svg>
                         <a
                           className='font-bold gap-2 inline-flex items-center'
-                          href='https://www.geckoterminal.com/avax/pools'
+                          href='/avax/pools'
                         >
                           <span className='truncate'>Avalanche</span>
                         </a>
@@ -212,7 +212,7 @@ const CoinDetails = () => {
                         </svg>
                         <a
                           className='gap-2 inline-flex items-center'
-                          href='https://www.geckoterminal.com/avax/traderjoe/pools'
+                          href='/avax/traderjoe/pools'
                         >
                           <span className='truncate'>TraderJoe</span>
                         </a>
@@ -833,11 +833,11 @@ const CoinDetails = () => {
                           <small className='font-light text-[10px] text-gray-500'>
                             <a
                               className='text-green-600 hover:underline'
-                              href='https://www.coingecko.com/'
+                              href='https://www.Dexmarketcap.com/'
                               target='_blank'
                               rel='noreferrer'
                             >
-                              Powered By CoinGecko
+                              Powered By Dexmarketcap
                             </a>
                           </small>
                         </div>
