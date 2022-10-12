@@ -1,8 +1,9 @@
 import { AdvancedChart } from 'react-tradingview-embed';
 
+import exchangeHistoryDummy from '@/data/exchangeHistoryDummy';
+
 // import { TechnicalAnalysis } from 'react-ts-tradingview-widgets';
 import NextImage from '@/components/Common/NextImage';
-
 const CoinDetails = () => {
   return (
     <div
@@ -326,11 +327,8 @@ const CoinDetails = () => {
                           </button>
                           <div className='absolute'></div>
                         </div>
-                        <a
-                          className='flex'
-                          href='https://www.geckoterminal.com/avax/pools'
-                        >
-                          <span className='bg-gray-400/30 flex font-medium gap-1 h-full inline-flex items-center items-center leading-none px-2.5 py-1 rounded-full text-gray-200 text-xs uppercase hover:text-white'>
+                        <a className='flex' href='/avax/pools'>
+                          <span className='bg-gray-400/30 font-medium gap-1 h-full inline-flex items-center leading-none px-2.5 py-1 rounded-full text-gray-200 text-xs uppercase hover:text-white'>
                             <div className='flex flex-shrink-0'>
                               <NextImage
                                 alt=''
@@ -344,11 +342,8 @@ const CoinDetails = () => {
                             avax
                           </span>
                         </a>
-                        <a
-                          className='flex'
-                          href='https://www.geckoterminal.com/avax/traderjoe/pools'
-                        >
-                          <span className='bg-gray-400/30 flex font-medium gap-1 h-full inline-flex items-center items-center leading-none px-2.5 py-1 rounded-full text-gray-200 text-xs hover:text-white'>
+                        <a className='flex' href='/avax/traderjoe/pools'>
+                          <span className='bg-gray-400/30 font-medium gap-1 h-full inline-flex items-center leading-none px-2.5 py-1 rounded-full text-gray-200 text-xs hover:text-white'>
                             <div className='flex flex-shrink-0'>
                               <NextImage
                                 alt=''
@@ -482,7 +477,7 @@ const CoinDetails = () => {
                             Pair
                           </span>
                           <div className='col-span-3 flex gap-2 items-center'>
-                            <span className='bg-gray-400/30 flex font-medium gap-1 inline-flex items-center leading-none px-3 py-1 rounded rounded-full text-gray-200 text-sm'>
+                            <span className='bg-gray-400/30 font-medium gap-1 inline-flex items-center leading-none px-3 py-1 rounded-full text-gray-200 text-sm'>
                               <div>0xf40...8adb</div>
                             </span>
                             <div className='flex gap-0.5 items-center'>
@@ -530,7 +525,7 @@ const CoinDetails = () => {
                             WAVAX
                           </span>
                           <div className='col-span-3 flex gap-2 items-center'>
-                            <span className='bg-gray-400/30 flex font-medium gap-1 inline-flex items-center items-center leading-none px-3 py-1 rounded rounded-full text-gray-200 text-sm'>
+                            <span className='bg-gray-400/30 font-medium gap-1 inline-flex items-center leading-none px-3 py-1 rounded-full text-gray-200 text-sm'>
                               <div className='flex flex-shrink-0'>
                                 <NextImage
                                   alt=''
@@ -606,7 +601,7 @@ const CoinDetails = () => {
                             USDC
                           </span>
                           <div className='col-span-3 flex gap-2 items-center'>
-                            <span className='bg-gray-400/30 flex font-medium gap-1 inline-flex items-center items-center leading-none px-3 py-1 rounded rounded-full text-gray-200 text-sm'>
+                            <span className='bg-gray-400/30 font-medium gap-1 inline-flex items-center leading-none px-3 py-1 rounded-full text-gray-200 text-sm'>
                               <div className='flex flex-shrink-0'>
                                 <NextImage
                                   alt=''
@@ -1088,1338 +1083,123 @@ const CoinDetails = () => {
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
+                                {exchangeHistoryDummy.map((item, index) => (
+                                  <tr
+                                    key={index}
+                                    className='divide-gray-800/80 divide-x text-gray-300 text-sm'
                                   >
-                                    <div className='text-red-500'>
-                                      <span className='hidden md:inline'>
-                                        49 seconds ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        49 sec. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-red-500'>
-                                      sell
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>5.6211</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>5.6211</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x096...9231
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xc4536be6322daa14379f0e8df73b21e4607578eb91d3d81bd0cb711caefc522d'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
+                                    <td
+                                      className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
+                                      colSpan={1}
                                     >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>
-                                      <span className='hidden md:inline'>
-                                        5 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        5 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-red-500'>
-                                      sell
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>3</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>3</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0xc57...8a70
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0x994159a68599e367384dcf80f134bd0d95a2a4ec48665c729d3169e77e59d9fa'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
+                                      <div
+                                        className={
+                                          item.type === 'sell'
+                                            ? 'text-red-500'
+                                            : 'text-green-500'
+                                        }
+                                      >
+                                        <span className='hidden md:inline'>
+                                          {item.time}
+                                        </span>
+                                        <span className='md:hidden'>
+                                          {item.time}
+                                        </span>
+                                      </div>
+                                    </td>
+                                    <td
+                                      className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
+                                      colSpan={1}
                                     >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        6 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        6 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>0.9614</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>0.9614</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0xdb6...f498
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0x43bad387edca1931216d592a614662cf49a264497d617d77a4ebc8469f5455ba'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
+                                      <div
+                                        className={
+                                          item.type === 'sell'
+                                            ? 'capitalize text-red-500'
+                                            : 'capitalize text-green-500'
+                                        }
+                                      >
+                                        {item.type}
+                                      </div>
+                                    </td>
+                                    <td
+                                      className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
+                                      colSpan={1}
                                     >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        6 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        6 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>0.75</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>0.75</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x60a...33d4
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0x3ae41d872c7245d15a3190ee44a6d6cd301d1ba191863773598f5dc2b8c1dfb5'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
+                                      <div
+                                        className={
+                                          item.type === 'sell'
+                                            ? 'capitalize text-red-500'
+                                            : 'capitalize text-green-500'
+                                        }
+                                      >
+                                        {item.aprice}
+                                      </div>
+                                    </td>
+                                    <td
+                                      className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
+                                      colSpan={1}
                                     >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        7 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        7 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>0.2686</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>0.2686</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x60a...33d4
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xac9fbd7e9169b9e9dae8853d76af55024008e9cb62167dc07ac6bcbd3e10a320'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
+                                      <div
+                                        className={
+                                          item.type === 'sell'
+                                            ? 'capitalize text-red-500'
+                                            : 'capitalize text-green-500'
+                                        }
+                                      >
+                                        {item.bprice}
+                                      </div>
+                                    </td>
+                                    <td
+                                      className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
+                                      colSpan={1}
                                     >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        8 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        8 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>24.38</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>24.38</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x60a...33d4
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0x7a35279b032689bb307c2e9cc03a9ccf67f50a8c1833857565f7ea1cf516fae3'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
+                                      <div
+                                        className={
+                                          item.type === 'sell'
+                                            ? 'capitalize text-red-500'
+                                            : 'capitalize text-green-500'
+                                        }
+                                      >
+                                        {item.amount}
+                                      </div>
+                                    </td>
+                                    <td
+                                      className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
+                                      colSpan={1}
                                     >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        10 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        10 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>0.3015</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>0.3015</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x60a...33d4
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xe9dd46264bc9226e3d09fecea6341be1b68820148a25ee8a5b2d76d76e3ee4ab'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
+                                      <div
+                                        className={
+                                          item.type === 'sell'
+                                            ? 'capitalize text-red-500'
+                                            : 'capitalize text-green-500'
+                                        }
+                                      >
+                                        {item.totalAmount}
+                                      </div>
+                                    </td>
+                                    <td
+                                      className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
+                                      colSpan={1}
                                     >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        10 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        10 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      0.01193
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      0.01193
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x60a...33d4
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xa041f55f8c21ef891d7d516b66902564d476f461a85aec077a3037a04073556a'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
+                                      {item.address}
+                                    </td>
+                                    <td
+                                      className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
+                                      colSpan={1}
                                     >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        10 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        10 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      0.03215
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      0.03215
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x4b9...094d
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xfb0a4de31dc69b0c74948a5847e4358db899949792a2532f6a135a0e6f3ad055'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        11 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        11 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>0.8</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>0.8</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x60a...33d4
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0x108ad9d40c8c5ff9e9d734e928d048c5b941c4d9bae215fa511ad35aa227ae46'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>
-                                      <span className='hidden md:inline'>
-                                        11 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        11 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-red-500'>
-                                      sell
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>0.03234</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>0.03234</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x315...45f3
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0x0fd1ac7cdffb69c9b5e85c6ee15512b8a3f4abe0ac44c054ce7fd18d5a9fb267'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        12 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        12 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>59.47</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>59.47</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x60a...33d4
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0x472ea5124ede5955abdadd098f96bba3a697edd300ceeed12a985b71a5344868'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>
-                                      <span className='hidden md:inline'>
-                                        13 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        13 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-red-500'>
-                                      sell
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>9.274</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>9.274</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0xa42...12f3
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xdbdbc31465fa650430caeb7815057db66480e8f01bbe0352a01e6ad947623a6b'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>
-                                      <span className='hidden md:inline'>
-                                        13 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        13 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-red-500'>
-                                      sell
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>38.84</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>38.84</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0xa9b...8579
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xdcc65053bffd4bd03e5c5b297207318d17e8baec5fa2a35321213bf6ed6b5369'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        13 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        13 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1.0155</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1.0155</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0xe7e...c285
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xe062020c3afb8a9bf672e25e754d82e4b636daeeb123757aa9fc03bac684b75f'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>
-                                      <span className='hidden md:inline'>
-                                        13 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        13 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-red-500'>
-                                      sell
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>47.2</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>47.2</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x2d8...ce64
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xdf0961e1c5227dc40ad9c83a19a2112164aac7e1036d595e57231384f884a8de'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>
-                                      <span className='hidden md:inline'>
-                                        14 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        14 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-red-500'>
-                                      sell
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>59.84</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>59.84</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0xfcb...9c3c
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0x9853eb7d4fccb7aa3f3e33685beda7fdb1290db6c6860425790bf31455486987'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>
-                                      <span className='hidden md:inline'>
-                                        14 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        14 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-red-500'>
-                                      sell
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>8.3484</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-red-500'>8.3484</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x6dd...caf6
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0x2f0afaa3484ecdf0449290e70ed85dcaabef9fd027538dfa8258fd1594f50158'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        17 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        17 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      0.04926
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      0.04926
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x0b4...3225
-                                  </td>
-                                  <td
-                                    className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xc95697333ff11e57bd2a61e0004bed229d6c8097be97fd36fff04359da37becd'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr className='divide-gray-800/80 divide-x text-gray-300 text-sm'>
-                                  <td
-                                    className='bg-black px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>
-                                      <span className='hidden md:inline'>
-                                        17 minutes ago
-                                      </span>
-                                      <span className='md:hidden'>
-                                        17 min. ago
-                                      </span>
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='capitalize text-green-500'>
-                                      buy
-                                    </div>
-                                  </td>
-                                  <td
-                                    className='bg-black px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>1</div>
-                                  </td>
-                                  <td
-                                    className='bg-black px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>$16.77</div>
-                                  </td>
-                                  <td
-                                    className='bg-black px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>7.9525</div>
-                                  </td>
-                                  <td
-                                    className='bg-black px-4 py-1 text-right whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <div className='text-green-500'>7.9525</div>
-                                  </td>
-                                  <td
-                                    className='bg-black px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    0x60a...33d4
-                                  </td>
-                                  <td
-                                    className='bg-black px-4 py-1 whitespace-nowrap md:py-1.5'
-                                    colSpan={1}
-                                  >
-                                    <a
-                                      className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
-                                      href='https://snowtrace.io/tx/0xf7cb48b069a3e078f84dc8ec2904f07c2dd613cc7268133585e0738ee92b50dc'
-                                      target='_blank'
-                                      rel='noreferrer noopener'
-                                    >
-                                      View
-                                    </a>
-                                  </td>
-                                </tr>
+                                      <a
+                                        className='dark:hover:text-violet-400 dark:text-violet-500 hover:underline'
+                                        href={
+                                          'https://snowtrace.io/tx/' + item.tx
+                                        }
+                                        target='_blank'
+                                        rel='noreferrer noopener'
+                                      >
+                                        View
+                                      </a>
+                                    </td>
+                                  </tr>
+                                ))}
                               </tbody>
                             </table>
                           </div>
