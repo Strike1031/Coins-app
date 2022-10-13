@@ -1,22 +1,61 @@
-import { AdvancedChart } from 'react-tradingview-embed';
+// import { autocomplete } from '@algolia/autocomplete-js';
+import { autocomplete } from '@algolia/autocomplete-js';
+import dynamic from 'next/dynamic';
+import { useEffect } from 'react';
+import '@algolia/autocomplete-theme-classic';
 
 import exchangeHistoryDummy from '@/data/exchangeHistoryDummy';
 
-// import { TechnicalAnalysis } from 'react-ts-tradingview-widgets';
 import NextImage from '@/components/Common/NextImage';
+
 const CoinDetails = () => {
+  const MyChart = dynamic(() => import('@/components/coins/myAdvancedChart'), {
+    ssr: false,
+  });
+  useEffect(() => {
+    autocomplete({
+      container: '#autocomplete',
+      placeholder: 'Search network, dex or tokens',
+      // getSources({ query }) {
+      //   return [
+      //     {
+      //       sourceId: 'products',
+      //       getItems() {
+      //         return getAlgoliaResults({
+      //           searchClient,
+      //           queries: [
+      //             {
+      //               indexName: 'instant_search',
+      //               query,
+      //               params: {
+      //                 hitsPerPage: 5,
+      //               },
+      //             },
+      //           ],
+      //         });
+      //       },
+      //       templates: {},
+      //       getItemUrl({ item }) {
+      //          return item.url;
+      //        },
+      //     },
+      //   ];
+      // },
+    });
+  }, []);
+
   return (
     <div
       id='coinDetails-overlay'
-      className='-translate-x-full bg-white border-r duration-300 fixed h-full hidden hs-overlay hs-overlay-open:translate-x-0 left-0 max-w-100 top-0 transform transition-all w-full z-[60] dark:bg-gray-800 dark:border-gray-700'
+      className='hs-overlay hs-overlay-open:translate-x-0 max-w-100 z-[60] hidden fixed top-0 left-0 w-full h-full bg-white border-r transition-all duration-300 transform -translate-x-full dark:bg-gray-800 dark:border-gray-700'
       tabIndex={-1}
     >
       <div id='__next'>
-        <div className='flex flex-col-reverse sticky top-0 z-20 sm:flex-col'>
-          <div className='bg-gray-900 border-b border-gray-800 flex gap-2 h-[32px] items-center justify-center px-4 py-1.5 sticky text-gray-200 text-xs top-14 w-full z-10 sm:gap-4 sm:top-0'>
+        <div className='flex sticky top-0 z-20 flex-col-reverse sm:flex-col'>
+          <div className='h-[32px] flex sticky top-14 z-10 gap-2 justify-center items-center px-4 py-1.5 w-full text-xs text-gray-200 bg-gray-900 border-b border-gray-800 sm:top-0 sm:gap-4'>
             <button
               type='button'
-              className='absolute flex-shrink-0 h-8 items-center left-6 rounded-md text-sm text-white-500 top-0 w-8 dark:focus:ring-offset-white-800 dark:focus:ring-white-700 dark:hover:text-white-400 dark:text-white-500 hover:text-white-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-white-400'
+              className='text-white-500 absolute top-0 left-6 flex-shrink-0 items-center w-8 h-8 text-sm rounded-md dark:focus:ring-offset-white-800 dark:focus:ring-white-700 dark:hover:text-white-400 dark:text-white-500 hover:text-white-700 focus:ring-white-400 focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:outline-none'
               data-hs-overlay='#coinDetails-overlay'
             >
               <span className='sr-only'>Close modal</span>
@@ -37,40 +76,40 @@ const CoinDetails = () => {
             </button>
             <div className='flex gap-1 items-center'>
               <span className='text-gray-300'>Networks :</span>
-              <span className='font-medium hidden text-violet-400 sm:inline'>
+              <span className='hidden font-medium text-violet-400 sm:inline'>
                 64
               </span>
               <span className='font-medium text-violet-400 sm:hidden'>64</span>
             </div>
             <div className='flex gap-1 items-center'>
               <span className='text-gray-300'>Dexes :</span>
-              <span className='font-medium hidden text-violet-400 sm:inline'>
+              <span className='hidden font-medium text-violet-400 sm:inline'>
                 326
               </span>
               <span className='font-medium text-violet-400 sm:hidden'>326</span>
             </div>
             <div className='flex gap-1 items-center'>
               <span className='text-gray-300'>Pools :</span>
-              <span className='font-medium hidden text-violet-400 sm:inline'>
+              <span className='hidden font-medium text-violet-400 sm:inline'>
                 1,155,806
               </span>
               <span className='font-medium text-violet-400 sm:hidden'>1M</span>
             </div>
             <div className='flex gap-1 items-center'>
               <span className='text-gray-300'>Tokens :</span>
-              <span className='font-medium hidden text-violet-400 sm:inline'>
+              <span className='hidden font-medium text-violet-400 sm:inline'>
                 1,040,904
               </span>
               <span className='font-medium text-violet-400 sm:hidden'>1M</span>
             </div>
           </div>
-          <nav className='border-b flex h-14 items-center py-2 shadow-md sticky top-0 z-20 sm:top-[32px] dark:bg-gray-900 dark:border-gray-800 dark:shadow-gray-600/10'>
+          <nav className='flex sticky top-0 z-20 items-center py-2 h-14 border-b shadow-md sm:top-[32px] dark:shadow-gray-600/10 dark:bg-gray-900 dark:border-gray-800'>
             <div className='flex gap-1 items-center px-2 w-full sm:gap-4 md:w-auto'>
               <div className='flex gap-1 items-center p-2'>
                 <div className='hidden xl:inline-block'>
                   <button
                     type='button'
-                    className='inline-flex items-center justify-center p-2 rounded-full dark:focus:bg-violet-400/30 dark:hover:bg-violet-400/30 dark:text-gray-50'
+                    className='inline-flex justify-center items-center p-2 rounded-full dark:focus:bg-violet-400/30 dark:hover:bg-violet-400/30 dark:text-gray-50'
                   >
                     <span className='sr-only'>Show networks list</span>
                   </button>
@@ -78,48 +117,19 @@ const CoinDetails = () => {
               </div>
               <div
                 id='autocomplete'
-                className='ml-auto relative sm:ml-0 sm:w-80'
-              >
-                <span className='sr-only'>Searchbar</span>
-                <span className='absolute bg-violet-400/50 hidden px-1.5 py-0.5 right-2 rounded text-violet-200/80 text-xs top-[6px] sm:block'>
-                  /
-                </span>
-                <div
-                  className='aa-Autocomplete'
-                  role='combobox'
-                  aria-expanded='false'
-                  aria-haspopup='listbox'
-                  aria-labelledby='autocomplete-27-label'
-                >
-                  <button type='button' className='aa-DetachedSearchButton'>
-                    <div className='aa-DetachedSearchButtonIcon'>
-                      <svg
-                        className='aa-SubmitIcon'
-                        viewBox='0 0 24 24'
-                        width='20'
-                        height='20'
-                        fill='currentColor'
-                      >
-                        <path d='M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z'></path>
-                      </svg>
-                    </div>
-                    <div className='aa-DetachedSearchButtonPlaceholder'>
-                      Search network, dex or tokens
-                    </div>
-                  </button>
-                </div>
-              </div>
+                className='relative ml-auto sm:ml-0 sm:w-80'
+              ></div>
               <div className='ml-2 sm:block md:ml-4'>
                 <div className='flex space-x-4'>
                   <a
-                    className='flex font-medium items-center px-3 py-2 relative rounded-md text-gray-300 text-sm whitespace-nowrap hover:bg-gray-600/30 hover:text-white'
+                    className='flex relative items-center px-3 py-2 text-sm font-medium text-gray-300 whitespace-nowrap rounded-md hover:bg-gray-600/30 hover:text-white'
                     href='https://www.geckoterminal.com/ethwars'
                   >
                     <span className='mr-2'>⚔️ ETH Wars</span>
-                    <span className='absolute bg-red-500 leading-none p-0.5 right-1 rounded text-[7px] text-white top-0 sm:hidden'>
+                    <span className='text-[7px] absolute top-0 right-1 p-0.5 leading-none text-white bg-red-500 rounded sm:hidden'>
                       New
                     </span>
-                    <span className='bg-red-600 font-medium inline-flex items-center leading-none px-2.5 py-1 rounded-full text-red-100 text-xs sm:inline'>
+                    <span className='inline-flex items-center px-2.5 py-1 text-xs font-medium leading-none text-red-100 bg-red-600 rounded-full sm:inline'>
                       New
                     </span>
                   </a>
@@ -127,7 +137,7 @@ const CoinDetails = () => {
               </div>
               <button
                 type='button'
-                className='bg-gradient-to-r from-violet-800 gap-1 inline-flex items-center mr-2 px-2.5 py-1.5 rounded-full text-gray-50 text-sm to-indigo-600 sm:hidden hover:bg-violet-700 focus:bg-violet-700'
+                className='inline-flex gap-1 items-center px-2.5 py-1.5 mr-2 text-sm text-gray-50 bg-gradient-to-r from-violet-800 to-indigo-600 rounded-full sm:hidden hover:bg-violet-700 focus:bg-violet-700'
               >
                 <span className='sr-only'>Open sidebar</span>
                 <svg
@@ -137,7 +147,7 @@ const CoinDetails = () => {
                   strokeWidth='2'
                   stroke='currentColor'
                   aria-hidden='true'
-                  className='h-5 mr-2 w-5'
+                  className='mr-2 w-5 h-5'
                 >
                   <path
                     strokeLinecap='round'
@@ -146,7 +156,7 @@ const CoinDetails = () => {
                   ></path>
                 </svg>
                 <div className='flex gap-2 items-center xs:max-w-[25vw]'>
-                  <div className='flex flex-shrink-0 h-5 w-5'>
+                  <div className='flex flex-shrink-0 w-5 h-5'>
                     <NextImage
                       alt=''
                       src='/images/coinDetails/wrapped-avax.png'
@@ -156,7 +166,7 @@ const CoinDetails = () => {
                       data-nimg='future'
                     />
                   </div>
-                  <span className='max-w-[200px] truncate xxs:hidden'>
+                  <span className='max-w-[200px] xxs:hidden truncate'>
                     Avalanche
                   </span>
                 </div>
@@ -164,16 +174,16 @@ const CoinDetails = () => {
             </div>
           </nav>
         </div>
-        <div className='flex flex-col min-w-0 overflow-hidden text-gray-400'>
+        <div className='flex overflow-hidden flex-col min-w-0 text-gray-400'>
           <main>
-            <div className='pb-10 px-0'>
-              <div className='grid grid-cols-12 md:divide-gray-800 md:divide-x'>
-                <div className='col-span-12 flex flex-col gap-2 overflow-x-hidden overflow-y-auto pt-4 px-4 scrollbar-thin md:col-span-5 md:h-screen-layout md:p-4 lg:col-span-4 xl:col-span-4 2xl:col-span-3'>
+            <div className='px-0 pb-10'>
+              <div className='grid grid-cols-12 md:divide-x md:divide-gray-800'>
+                <div className='scrollbar-thin flex overflow-y-auto overflow-x-hidden flex-col col-span-12 gap-2 px-4 pt-4 md:h-screen-layout md:col-span-5 md:p-4 lg:col-span-4 xl:col-span-4 2xl:col-span-3'>
                   <nav className='mb-1 lg:mb-2' aria-label='breadcrumbs'>
                     <ol className='flex flex-row items-center text-gray-400'>
                       <li>
                         <svg
-                          className='cursor-pointer flex-shrink-0 h-5 w-5'
+                          className='flex-shrink-0 w-5 h-5 cursor-pointer'
                           xmlns='http://www.w3.org/2000/svg'
                           viewBox='0 0 20 20'
                           fill='currentColor'
@@ -185,7 +195,7 @@ const CoinDetails = () => {
                       </li>
                       <li className='flex flex-row items-center text-sm lg:text-base'>
                         <svg
-                          className='flex-shrink-0 h-5 text-gray-400 w-5'
+                          className='flex-shrink-0 w-5 h-5 text-gray-400'
                           xmlns='http://www.w3.org/2000/svg'
                           fill='currentColor'
                           viewBox='0 0 20 20'
@@ -194,7 +204,7 @@ const CoinDetails = () => {
                           <path d='M5.555 17.776l8-16 .894.448-8 16-.894-.448z'></path>
                         </svg>
                         <a
-                          className='font-bold gap-2 inline-flex items-center'
+                          className='inline-flex gap-2 items-center font-bold'
                           href='/avax/pools'
                         >
                           <span className='truncate'>Avalanche</span>
@@ -202,7 +212,7 @@ const CoinDetails = () => {
                       </li>
                       <li className='flex flex-row items-center text-sm lg:text-base'>
                         <svg
-                          className='flex-shrink-0 h-5 text-gray-400 w-5'
+                          className='flex-shrink-0 w-5 h-5 text-gray-400'
                           xmlns='http://www.w3.org/2000/svg'
                           fill='currentColor'
                           viewBox='0 0 20 20'
@@ -211,7 +221,7 @@ const CoinDetails = () => {
                           <path d='M5.555 17.776l8-16 .894.448-8 16-.894-.448z'></path>
                         </svg>
                         <a
-                          className='gap-2 inline-flex items-center'
+                          className='inline-flex gap-2 items-center'
                           href='/avax/traderjoe/pools'
                         >
                           <span className='truncate'>TraderJoe</span>
@@ -243,8 +253,8 @@ const CoinDetails = () => {
                           />
                         </div>
                       </div>
-                      <div className='flex font-light gap-1 items-center mr-2 text-gray-200 text-sm lg:text-base'>
-                        <span className='font-bold inline-block truncate'>
+                      <div className='flex gap-1 items-center mr-2 text-sm font-light text-gray-200 lg:text-base'>
+                        <span className='inline-block font-bold truncate'>
                           WAVAX
                         </span>
                         <span>/</span>
@@ -253,7 +263,7 @@ const CoinDetails = () => {
                       <div className='flex items-center'>
                         <button>
                           <svg
-                            className='flex-shrink-0 h-5 w-5'
+                            className='flex-shrink-0 w-5 h-5'
                             viewBox='0 0 512 512'
                             xmlns='http://www.w3.org/2000/svg'
                           >
@@ -296,14 +306,14 @@ const CoinDetails = () => {
                       </h6>
                       <div className='flex gap-2 items-center mb-2 text-2xl text-white md:gap-3 lg:mb-4'>
                         <span id='pool-price-display'>$16.77</span>
-                        <span className='bg-red-600 font-medium inline-flex items-center leading-none px-2.5 py-1 rounded-full text-red-100 text-xs'>
+                        <span className='inline-flex items-center px-2.5 py-1 text-xs font-medium leading-none text-red-100 bg-red-600 rounded-full'>
                           -2.73%
                         </span>
                       </div>
                       <div className='flex flex-wrap gap-2 items-center mt-2'>
                         <div className='relative'>
                           <button
-                            className='bg-gray-400/30 flex-shrink-0 items-center px-3 py-1.5 rounded shadow-sm hover:bg-gray-400/40 active:outline-none active:ring-2 active:ring-violet-500'
+                            className='bg-gray-400/30 flex-shrink-0 items-center px-3 py-1.5 rounded shadow-sm hover:bg-gray-400/40 active:ring-2 active:ring-violet-500 active:outline-none'
                             id='headlessui-menu-button-:rn:'
                             type='button'
                             aria-haspopup='true'
@@ -328,7 +338,7 @@ const CoinDetails = () => {
                           <div className='absolute'></div>
                         </div>
                         <a className='flex' href='/avax/pools'>
-                          <span className='bg-gray-400/30 font-medium gap-1 h-full inline-flex items-center leading-none px-2.5 py-1 rounded-full text-gray-200 text-xs uppercase hover:text-white'>
+                          <span className='bg-gray-400/30 inline-flex gap-1 items-center px-2.5 py-1 h-full text-xs font-medium leading-none text-gray-200 uppercase rounded-full hover:text-white'>
                             <div className='flex flex-shrink-0'>
                               <NextImage
                                 alt=''
@@ -343,7 +353,7 @@ const CoinDetails = () => {
                           </span>
                         </a>
                         <a className='flex' href='/avax/traderjoe/pools'>
-                          <span className='bg-gray-400/30 font-medium gap-1 h-full inline-flex items-center leading-none px-2.5 py-1 rounded-full text-gray-200 text-xs hover:text-white'>
+                          <span className='bg-gray-400/30 inline-flex gap-1 items-center px-2.5 py-1 h-full text-xs font-medium leading-none text-gray-200 rounded-full hover:text-white'>
                             <div className='flex flex-shrink-0'>
                               <NextImage
                                 alt=''
@@ -360,60 +370,60 @@ const CoinDetails = () => {
                       </div>
                     </div>
                     <div className='my-4'>
-                      <div className='gap-2 grid grid-cols-3'>
+                      <div className='grid grid-cols-3 gap-2'>
                         <div className='bg-gray-500/60 flex flex-col items-center p-1 rounded'>
                           <span>0%</span>
-                          <span className='text-gray-300 text-sm'>5m</span>
+                          <span className='text-sm text-gray-300'>5m</span>
                         </div>
-                        <div className='bg-red-600/60 flex flex-col items-center p-1 rounded text-red-300'>
+                        <div className='bg-red-600/60 flex flex-col items-center p-1 text-red-300 rounded'>
                           <span>-0.02%</span>
-                          <span className='text-gray-300 text-sm'>15m</span>
+                          <span className='text-sm text-gray-300'>15m</span>
                         </div>
-                        <div className='bg-red-600/60 flex flex-col items-center p-1 rounded text-red-300'>
+                        <div className='bg-red-600/60 flex flex-col items-center p-1 text-red-300 rounded'>
                           <span>-0.46%</span>
-                          <span className='text-gray-300 text-sm'>30m</span>
+                          <span className='text-sm text-gray-300'>30m</span>
                         </div>
-                        <div className='bg-red-600/60 flex flex-col items-center p-1 rounded text-red-300'>
+                        <div className='bg-red-600/60 flex flex-col items-center p-1 text-red-300 rounded'>
                           <span>-0.9%</span>
-                          <span className='text-gray-300 text-sm'>1h</span>
+                          <span className='text-sm text-gray-300'>1h</span>
                         </div>
-                        <div className='bg-red-600/60 flex flex-col items-center p-1 rounded text-red-300'>
+                        <div className='bg-red-600/60 flex flex-col items-center p-1 text-red-300 rounded'>
                           <span>-1.86%</span>
-                          <span className='text-gray-300 text-sm'>6h</span>
+                          <span className='text-sm text-gray-300'>6h</span>
                         </div>
-                        <div className='bg-red-600/60 flex flex-col items-center p-1 rounded text-red-300'>
+                        <div className='bg-red-600/60 flex flex-col items-center p-1 text-red-300 rounded'>
                           <span>-2.73%</span>
-                          <span className='text-gray-300 text-sm'>24h</span>
+                          <span className='text-sm text-gray-300'>24h</span>
                         </div>
                       </div>
-                      <div className='bg-gray-500/20 mt-4 p-0 rounded-md'>
+                      <div className='bg-gray-500/20 p-0 mt-4 rounded-md'>
                         <nav
-                          className='flex p-1 relative rounded-tl-md rounded-tr-md z-0'
+                          className='flex relative z-0 p-1 rounded-tl-md rounded-tr-md'
                           aria-label='Tabs'
                         >
-                          <a className='cursor-pointer flex-1 font-medium group min-w-0 overflow-hidden p-2 relative text-center text-gray-500 text-sm hover:text-gray-200 focus:z-10'>
+                          <a className='group overflow-hidden relative flex-1 p-2 min-w-0 text-sm font-medium text-center text-gray-500 cursor-pointer hover:text-gray-200 focus:z-10'>
                             <span>5m</span>
                           </a>
-                          <a className='cursor-pointer flex-1 font-medium group min-w-0 overflow-hidden p-2 relative text-center text-gray-500 text-sm hover:text-gray-200 focus:z-10'>
+                          <a className='group overflow-hidden relative flex-1 p-2 min-w-0 text-sm font-medium text-center text-gray-500 cursor-pointer hover:text-gray-200 focus:z-10'>
                             <span>15m</span>
                           </a>
-                          <a className='cursor-pointer flex-1 font-medium group min-w-0 overflow-hidden p-2 relative text-center text-gray-500 text-sm hover:text-gray-200 focus:z-10'>
+                          <a className='group overflow-hidden relative flex-1 p-2 min-w-0 text-sm font-medium text-center text-gray-500 cursor-pointer hover:text-gray-200 focus:z-10'>
                             <span>30m</span>
                           </a>
-                          <a className='cursor-pointer flex-1 font-medium group min-w-0 overflow-hidden p-2 relative text-center text-gray-500 text-sm hover:text-gray-200 focus:z-10'>
+                          <a className='group overflow-hidden relative flex-1 p-2 min-w-0 text-sm font-medium text-center text-gray-500 cursor-pointer hover:text-gray-200 focus:z-10'>
                             <span>1h</span>
                           </a>
-                          <a className='cursor-pointer flex-1 font-medium group min-w-0 overflow-hidden p-2 relative text-center text-gray-500 text-sm hover:text-gray-200 focus:z-10'>
+                          <a className='group overflow-hidden relative flex-1 p-2 min-w-0 text-sm font-medium text-center text-gray-500 cursor-pointer hover:text-gray-200 focus:z-10'>
                             <span>6h</span>
                           </a>
                           <a
-                            className='bg-black cursor-pointer drop-shadow-md flex-1 font-medium group min-w-0 overflow-hidden p-2 relative rounded-md text-center text-gray-200 text-sm focus:z-10'
+                            className='group overflow-hidden relative flex-1 p-2 min-w-0 text-sm font-medium text-center text-gray-200 bg-black rounded-md drop-shadow-md cursor-pointer focus:z-10'
                             aria-current='page'
                           >
                             <span>24h</span>
                           </a>
                         </nav>
-                        <div className='gap-2 grid grid-cols-4 px-4 py-2'>
+                        <div className='grid grid-cols-4 gap-2 px-4 py-2'>
                           <div className='flex flex-col gap-1 items-center text-sm'>
                             <span className='font-light text-gray-500 uppercase'>
                               Txns
@@ -443,32 +453,32 @@ const CoinDetails = () => {
                     </div>
                   </div>
                   <div className='hidden md:flex md:flex-col md:gap-2'>
-                    <div className='gap-2 grid grid-cols-4 mt-4 lg:gap-3'>
-                      <div className='col-span-2 flex flex-col'>
+                    <div className='grid grid-cols-4 gap-2 mt-4 lg:gap-3'>
+                      <div className='flex flex-col col-span-2'>
                         <small className='text-gray-400'>
                           Fully Diluted Valuation
                         </small>
                         <span className='text-gray-200'>$141.61M</span>
                       </div>
-                      <div className='col-span-2 flex flex-col'>
+                      <div className='flex flex-col col-span-2'>
                         <small className='text-gray-400'>
                           Total Liquidity (USD)
                         </small>
                         <span className='text-gray-200'>$23.41M</span>
                       </div>
-                      <div className='col-span-2 flex flex-col'>
+                      <div className='flex flex-col col-span-2'>
                         <small className='text-gray-400'>
                           24hr Trading Volume
                         </small>
                         <span className='text-gray-200'>$2.61M</span>
                       </div>
-                      <div className='col-span-2 flex flex-col'>
+                      <div className='flex flex-col col-span-2'>
                         <small className='text-gray-400'>Market Cap</small>
                         <span className='text-gray-200'>-</span>
                       </div>
                     </div>
                     <div className='mt-4'>
-                      <h3 className='font-bold hidden mb-2 text-gray-500 text-xs uppercase md:block'>
+                      <h3 className='hidden mb-2 text-xs font-bold text-gray-500 uppercase md:block'>
                         Quick Links
                       </h3>
                       <div className='flex flex-col gap-1 lg:gap-2'>
@@ -476,8 +486,8 @@ const CoinDetails = () => {
                           <span className='col-span-1 text-sm truncate'>
                             Pair
                           </span>
-                          <div className='col-span-3 flex gap-2 items-center'>
-                            <span className='bg-gray-400/30 font-medium gap-1 inline-flex items-center leading-none px-3 py-1 rounded-full text-gray-200 text-sm'>
+                          <div className='flex col-span-3 gap-2 items-center'>
+                            <span className='bg-gray-400/30 inline-flex gap-1 items-center px-3 py-1 text-sm font-medium leading-none text-gray-200 rounded-full'>
                               <div>0xf40...8adb</div>
                             </span>
                             <div className='flex gap-0.5 items-center'>
@@ -524,8 +534,8 @@ const CoinDetails = () => {
                           <span className='col-span-1 text-sm truncate'>
                             WAVAX
                           </span>
-                          <div className='col-span-3 flex gap-2 items-center'>
-                            <span className='bg-gray-400/30 font-medium gap-1 inline-flex items-center leading-none px-3 py-1 rounded-full text-gray-200 text-sm'>
+                          <div className='flex col-span-3 gap-2 items-center'>
+                            <span className='bg-gray-400/30 inline-flex gap-1 items-center px-3 py-1 text-sm font-medium leading-none text-gray-200 rounded-full'>
                               <div className='flex flex-shrink-0'>
                                 <NextImage
                                   alt=''
@@ -581,7 +591,7 @@ const CoinDetails = () => {
                                   target='_blank'
                                   rel='noreferrer'
                                 >
-                                  <div className='flex flex-shrink-0 h-[18px] w-[18px]'>
+                                  <div className='h-[18px] w-[18px] flex flex-shrink-0'>
                                     <NextImage
                                       alt=''
                                       src='/images/coinDetails/coingecko.png'
@@ -600,8 +610,8 @@ const CoinDetails = () => {
                           <span className='col-span-1 text-sm truncate'>
                             USDC
                           </span>
-                          <div className='col-span-3 flex gap-2 items-center'>
-                            <span className='bg-gray-400/30 font-medium gap-1 inline-flex items-center leading-none px-3 py-1 rounded-full text-gray-200 text-sm'>
+                          <div className='flex col-span-3 gap-2 items-center'>
+                            <span className='bg-gray-400/30 inline-flex gap-1 items-center px-3 py-1 text-sm font-medium leading-none text-gray-200 rounded-full'>
                               <div className='flex flex-shrink-0'>
                                 <NextImage
                                   alt=''
@@ -657,7 +667,7 @@ const CoinDetails = () => {
                                   target='_blank'
                                   rel='noreferrer'
                                 >
-                                  <div className='flex flex-shrink-0 h-[18px] w-[18px]'>
+                                  <div className='h-[18px] w-[18px] flex flex-shrink-0'>
                                     <NextImage
                                       alt=''
                                       src='/images/coinDetails/coingecko.png'
@@ -674,8 +684,8 @@ const CoinDetails = () => {
                         </div>
                         <div className='grid grid-cols-4 items-center'>
                           <span className='col-span-1 text-sm'>Trade</span>
-                          <div className='col-span-3 flex items-center'>
-                            <button className='bg-gray-700 border border-transparent flex font-medium gap-2 items-center px-2.5 py-1.5 rounded shadow-sm text-white text-xs hover:bg-gray-800 focus:outline-none'>
+                          <div className='flex col-span-3 items-center'>
+                            <button className='flex gap-2 items-center px-2.5 py-1.5 text-xs font-medium text-white bg-gray-700 rounded border border-transparent shadow-sm hover:bg-gray-800 focus:outline-none'>
                               Swap on
                               <div className='flex flex-shrink-0'>
                                 <NextImage
@@ -692,7 +702,7 @@ const CoinDetails = () => {
                         </div>
                         <div className='grid grid-cols-4 items-center'>
                           <span className='col-span-1 text-sm'>Share</span>
-                          <div className='col-span-3 flex items-center'>
+                          <div className='flex col-span-3 items-center'>
                             <div className='flex flex-row items-center space-x-2'>
                               <span
                                 style={{
@@ -777,26 +787,26 @@ const CoinDetails = () => {
                         </div>
                       </div>
                     </div>
-                    <div className='bg-gray-500/30 mt-4 mx-auto p-4 rounded-2xl w-full sm:w-3/4 md:w-full'>
-                      <h3 className='font-medium mb-4 text-gray-200 text-sm'>
+                    <div className='bg-gray-500/30 p-4 mx-auto mt-4 w-full rounded-2xl sm:w-3/4 md:w-full'>
+                      <h3 className='mb-4 text-sm font-medium text-gray-200'>
                         How do you feel about WAVAX today?
                       </h3>
                       <div className='mb-2 w-full'>
                         <div className='flex'>
                           <div
-                            className='bg-green-600 leading-none overflow-hidden py-1 rounded text-center text-white text-xs'
+                            className='overflow-hidden py-1 text-xs leading-none text-center text-white bg-green-600 rounded'
                             style={{ width: '100%' }}
                           >
                             100%
                           </div>
                           <div
-                            className='bg-red-600 leading-none overflow-hidden py-1 rounded-r text-center text-white text-xs'
+                            className='overflow-hidden py-1 text-xs leading-none text-center text-white bg-red-600 rounded-r'
                             style={{ width: '0%' }}
                           ></div>
                         </div>
                       </div>
-                      <div className='flex items-center justify-between'>
-                        <button className='bg-green-600 border border-transparent flex font-medium gap-2 items-center px-2.5 py-1.5 rounded shadow-sm text-white text-xs hover:bg-green-700 focus:outline-none'>
+                      <div className='flex justify-between items-center'>
+                        <button className='flex gap-2 items-center px-2.5 py-1.5 text-xs font-medium text-white bg-green-600 rounded border border-transparent shadow-sm hover:bg-green-700 focus:outline-none'>
                           <div className='flex flex-shrink-0'>
                             <NextImage
                               alt=''
@@ -809,7 +819,7 @@ const CoinDetails = () => {
                           </div>
                           Looking good
                         </button>
-                        <button className='bg-red-600 border border-transparent flex font-medium gap-2 items-center px-2.5 py-1.5 rounded shadow-sm text-white text-xs hover:bg-red-700 focus:outline-none'>
+                        <button className='flex gap-2 items-center px-2.5 py-1.5 text-xs font-medium text-white bg-red-600 rounded border border-transparent shadow-sm hover:bg-red-700 focus:outline-none'>
                           <div className='flex flex-shrink-0'>
                             <NextImage
                               alt=''
@@ -827,10 +837,10 @@ const CoinDetails = () => {
                     <div className='mt-4'>
                       <div className='flex gap-2 items-center mb-2 lg:gap-4 lg:mb-4'>
                         <div className='flex flex-col'>
-                          <h3 className='font-bold hidden text-gray-500 text-xs uppercase md:block'>
+                          <h3 className='hidden text-xs font-bold text-gray-500 uppercase md:block'>
                             Token Info
                           </h3>
-                          <small className='font-light text-[10px] text-gray-500'>
+                          <small className='text-[10px] font-light text-gray-500'>
                             <a
                               className='text-green-600 hover:underline'
                               href='https://www.Dexmarketcap.com/'
@@ -843,17 +853,17 @@ const CoinDetails = () => {
                         </div>
                         <nav className='flex space-x-4' aria-label='Tabs'>
                           <button
-                            className='bg-violet-600 font-medium px-2 py-1 rounded-md text-gray-200 text-sm'
+                            className='px-2 py-1 text-sm font-medium text-gray-200 bg-violet-600 rounded-md'
                             aria-current='page'
                           >
                             WAVAX
                           </button>
-                          <button className='font-medium px-2 py-1 rounded-md text-gray-500 text-sm hover:bg-violet-600/60 hover:text-gray-200'>
+                          <button className='px-2 py-1 text-sm font-medium text-gray-500 rounded-md hover:bg-violet-600/60 hover:text-gray-200'>
                             USDC
                           </button>
                         </nav>
                       </div>
-                      <h2 className='font-semibold mb-2'>
+                      <h2 className='mb-2 font-semibold'>
                         About Wrapped AVAX (WAVAX)
                       </h2>
                       <p className='text-gray-600 whitespace-pre-wrap'>
@@ -864,14 +874,14 @@ const CoinDetails = () => {
                 </div>
                 <div className='col-span-12 mb-4 md:hidden'>
                   <div className='mt-2'>
-                    <div className='hidden mx-4 pb-4 pt-2'>
+                    <div className='hidden pt-2 pb-4 mx-4'>
                       <label htmlFor='tabs' className='sr-only'>
                         Select a tab
                       </label>
                       <select
                         id='tabs'
                         name='tabs'
-                        className='block border border-gray-600 rounded-md text-sm w-full lg:text-base dark:bg-gray-900 dark:text-gray-200 hover:bg-gray-50 focus:border-gray-700 focus:outline-none focus:ring-violet-500 focus:text-gray-700'
+                        className='block w-full text-sm rounded-md border border-gray-600 lg:text-base dark:text-gray-200 dark:bg-gray-900 hover:bg-gray-50 focus:text-gray-700 focus:border-gray-700 focus:ring-violet-500 focus:outline-none'
                       >
                         <option value='0'>Market Info</option>
                         <option value='1'>Quick Links</option>
@@ -879,23 +889,23 @@ const CoinDetails = () => {
                       </select>
                     </div>
                     <div className='border-0'>
-                      <div className='border-b border-gray-800 mb-4 overflow-x-auto px-4 scrollbar-thin thinner'>
+                      <div className='scrollbar-thin thinner overflow-x-auto px-4 mb-4 border-b border-gray-800'>
                         <div className='mr-8'>
                           <nav className='flex space-x-4' aria-label='Tabs'>
                             <button
                               aria-current='page'
-                              className='border-b-2 border-gray-300 font-medium group inline-flex items-center py-3 text-gray-200 text-sm'
+                              className='group inline-flex items-center py-3 text-sm font-medium text-gray-200 border-b-2 border-gray-300'
                             >
                               <span className='whitespace-nowrap'>
                                 Market Info
                               </span>
                             </button>
-                            <button className='border-b-2 border-transparent font-medium group inline-flex items-center py-3 text-gray-400 text-sm hover:border-gray-400 hover:text-gray-300'>
+                            <button className='group inline-flex items-center py-3 text-sm font-medium text-gray-400 border-b-2 border-transparent hover:text-gray-300 hover:border-gray-400'>
                               <span className='whitespace-nowrap'>
                                 Quick Links
                               </span>
                             </button>
-                            <button className='border-b-2 border-transparent font-medium group inline-flex items-center py-3 text-gray-400 text-sm hover:border-gray-400 hover:text-gray-300'>
+                            <button className='group inline-flex items-center py-3 text-sm font-medium text-gray-400 border-b-2 border-transparent hover:text-gray-300 hover:border-gray-400'>
                               <span className='whitespace-nowrap'>
                                 Token Info
                               </span>
@@ -906,50 +916,50 @@ const CoinDetails = () => {
                     </div>
                   </div>
                   <div className='px-4'>
-                    <div className='gap-2 grid grid-cols-4 mt-4 lg:gap-3'>
-                      <div className='col-span-2 flex flex-col'>
+                    <div className='grid grid-cols-4 gap-2 mt-4 lg:gap-3'>
+                      <div className='flex flex-col col-span-2'>
                         <small className='text-gray-400'>
                           Fully Diluted Valuation
                         </small>
                         <span className='text-gray-200'>$141.61M</span>
                       </div>
-                      <div className='col-span-2 flex flex-col'>
+                      <div className='flex flex-col col-span-2'>
                         <small className='text-gray-400'>
                           Total Liquidity (USD)
                         </small>
                         <span className='text-gray-200'>$23.41M</span>
                       </div>
-                      <div className='col-span-2 flex flex-col'>
+                      <div className='flex flex-col col-span-2'>
                         <small className='text-gray-400'>
                           24hr Trading Volume
                         </small>
                         <span className='text-gray-200'>$2.61M</span>
                       </div>
-                      <div className='col-span-2 flex flex-col'>
+                      <div className='flex flex-col col-span-2'>
                         <small className='text-gray-400'>Market Cap</small>
                         <span className='text-gray-200'>-</span>
                       </div>
                     </div>
-                    <div className='bg-gray-500/30 mt-4 mx-auto p-4 rounded-2xl w-full sm:w-3/4 md:w-full'>
-                      <h3 className='font-medium mb-4 text-gray-200 text-sm'>
+                    <div className='bg-gray-500/30 p-4 mx-auto mt-4 w-full rounded-2xl sm:w-3/4 md:w-full'>
+                      <h3 className='mb-4 text-sm font-medium text-gray-200'>
                         How do you feel about WAVAX today?
                       </h3>
                       <div className='mb-2 w-full'>
                         <div className='flex'>
                           <div
-                            className='bg-green-600 leading-none overflow-hidden py-1 rounded text-center text-white text-xs'
+                            className='overflow-hidden py-1 text-xs leading-none text-center text-white bg-green-600 rounded'
                             style={{ width: '100%;' }}
                           >
                             100%
                           </div>
                           <div
-                            className='bg-red-600 leading-none overflow-hidden py-1 rounded-r text-center text-white text-xs'
+                            className='overflow-hidden py-1 text-xs leading-none text-center text-white bg-red-600 rounded-r'
                             style={{ width: '0%' }}
                           ></div>
                         </div>
                       </div>
-                      <div className='flex items-center justify-between'>
-                        <button className='bg-green-600 border border-transparent flex font-medium gap-2 items-center px-2.5 py-1.5 rounded shadow-sm text-white text-xs hover:bg-green-700 focus:outline-none'>
+                      <div className='flex justify-between items-center'>
+                        <button className='flex gap-2 items-center px-2.5 py-1.5 text-xs font-medium text-white bg-green-600 rounded border border-transparent shadow-sm hover:bg-green-700 focus:outline-none'>
                           <div className='flex flex-shrink-0'>
                             <NextImage
                               alt=''
@@ -962,7 +972,7 @@ const CoinDetails = () => {
                           </div>
                           Looking good
                         </button>
-                        <button className='bg-red-600 border border-transparent flex font-medium gap-2 items-center px-2.5 py-1.5 rounded shadow-sm text-white text-xs hover:bg-red-700 focus:outline-none'>
+                        <button className='flex gap-2 items-center px-2.5 py-1.5 text-xs font-medium text-white bg-red-600 rounded border border-transparent shadow-sm hover:bg-red-700 focus:outline-none'>
                           <div className='flex flex-shrink-0'>
                             <NextImage
                               alt=''
@@ -980,14 +990,15 @@ const CoinDetails = () => {
                   </div>
                 </div>
                 <div className='col-span-12 px-4 py-4 md:col-span-7 md:px-0 md:py-0 lg:col-span-8 2xl:col-span-9'>
-                  <div className='flex flex-col gap-2 md:gap-0 md:h-screen-layout'>
+                  <div className='flex flex-col gap-2 md:h-screen-layout md:gap-0'>
                     <div
                       className='flex-[0_0_400px] md:flex-auto'
                       style={{ height: 'calc(60% - 2.5px)', overflow: 'auto' }}
                     >
                       <div className='h-full'>
-                        <div className='TVChartContainer h-full min-w-full'>
-                          <AdvancedChart
+                        <div className='TVChartContainer min-w-full h-full'>
+                          <MyChart />
+                          {/* <AdvancedChart
                             widgetProps={{
                               symbol: 'NASDAQ:AAPL',
                               interval: '180',
@@ -998,7 +1009,7 @@ const CoinDetails = () => {
                               enable_publishing: false,
                               allow_symbol_change: true,
                             }}
-                          />
+                          /> */}
                         </div>
                       </div>
                     </div>
@@ -1007,18 +1018,18 @@ const CoinDetails = () => {
                       style={{ height: '5px' }}
                     ></div>
                     <div style={{ height: 'calc(40% - 2.5px)' }}>
-                      <div className='flex flex-col h-full md:overflow-y-auto md:scrollbar-thin'>
+                      <div className='flex flex-col h-full md:scrollbar-thin md:overflow-y-auto'>
                         <div className='overflow-auto'>
-                          <div className='inline-block min-w-full scrollbar-thin'>
+                          <div className='scrollbar-thin inline-block min-w-full'>
                             <table
-                              className='border-b border-b-gray-800 border-separate border-t border-t-gray-800 min-w-full relative'
+                              className='border-b-gray-800 border-t-gray-800 relative min-w-full border-t border-b border-separate'
                               style={{ borderSpacing: '0px' }}
                             >
                               <thead>
-                                <tr className='divide-gray-800/80 divide-x text-gray-200 text-sm dark:bg-black'>
+                                <tr className='divide-gray-800/80 text-sm text-gray-200 divide-x dark:bg-black'>
                                   <th
                                     scope='col'
-                                    className='backdrop-blur backdrop-filter bg-darkblue border-b border-gray-800/80 font-medium sticky text-left text-xs top-0 tracking-wider uppercase'
+                                    className='bg-darkblue border-gray-800/80 sticky top-0 text-xs font-medium tracking-wider text-left uppercase border-b backdrop-filter backdrop-blur'
                                   >
                                     <div className='px-4 py-2 whitespace-nowrap md:py-3'>
                                       Time
@@ -1026,7 +1037,7 @@ const CoinDetails = () => {
                                   </th>
                                   <th
                                     scope='col'
-                                    className='backdrop-blur backdrop-filter bg-darkblue border-b border-gray-800/80 font-medium sticky text-left text-xs top-0 tracking-wider uppercase'
+                                    className='bg-darkblue border-gray-800/80 sticky top-0 text-xs font-medium tracking-wider text-left uppercase border-b backdrop-filter backdrop-blur'
                                   >
                                     <div className='px-4 py-2 whitespace-nowrap md:py-3'>
                                       Type
@@ -1034,7 +1045,7 @@ const CoinDetails = () => {
                                   </th>
                                   <th
                                     scope='col'
-                                    className='backdrop-blur backdrop-filter bg-darkblue border-b border-gray-800/80 font-medium sticky text-right text-xs top-0 tracking-wider uppercase'
+                                    className='bg-darkblue border-gray-800/80 sticky top-0 text-xs font-medium tracking-wider text-right uppercase border-b backdrop-filter backdrop-blur'
                                   >
                                     <div className='px-4 py-2 whitespace-nowrap md:py-3'>
                                       Price (AVAX)
@@ -1042,7 +1053,7 @@ const CoinDetails = () => {
                                   </th>
                                   <th
                                     scope='col'
-                                    className='backdrop-blur backdrop-filter bg-darkblue border-b border-gray-800/80 font-medium sticky text-right text-xs top-0 tracking-wider uppercase'
+                                    className='bg-darkblue border-gray-800/80 sticky top-0 text-xs font-medium tracking-wider text-right uppercase border-b backdrop-filter backdrop-blur'
                                   >
                                     <div className='px-4 py-2 whitespace-nowrap md:py-3'>
                                       Price (usd)
@@ -1050,7 +1061,7 @@ const CoinDetails = () => {
                                   </th>
                                   <th
                                     scope='col'
-                                    className='backdrop-blur backdrop-filter bg-darkblue border-b border-gray-800/80 font-medium sticky text-right text-xs top-0 tracking-wider uppercase'
+                                    className='bg-darkblue border-gray-800/80 sticky top-0 text-xs font-medium tracking-wider text-right uppercase border-b backdrop-filter backdrop-blur'
                                   >
                                     <div className='px-4 py-2 whitespace-nowrap md:py-3'>
                                       Amount (WAVAX)
@@ -1058,7 +1069,7 @@ const CoinDetails = () => {
                                   </th>
                                   <th
                                     scope='col'
-                                    className='backdrop-blur backdrop-filter bg-darkblue border-b border-gray-800/80 font-medium sticky text-right text-xs top-0 tracking-wider uppercase'
+                                    className='bg-darkblue border-gray-800/80 sticky top-0 text-xs font-medium tracking-wider text-right uppercase border-b backdrop-filter backdrop-blur'
                                   >
                                     <div className='px-4 py-2 whitespace-nowrap md:py-3'>
                                       Total AVAX
@@ -1066,7 +1077,7 @@ const CoinDetails = () => {
                                   </th>
                                   <th
                                     scope='col'
-                                    className='backdrop-blur backdrop-filter bg-darkblue border-b border-gray-800/80 font-medium sticky text-left text-xs top-0 tracking-wider uppercase'
+                                    className='bg-darkblue border-gray-800/80 sticky top-0 text-xs font-medium tracking-wider text-left uppercase border-b backdrop-filter backdrop-blur'
                                   >
                                     <div className='px-4 py-2 whitespace-nowrap md:py-3'>
                                       From
@@ -1074,7 +1085,7 @@ const CoinDetails = () => {
                                   </th>
                                   <th
                                     scope='col'
-                                    className='backdrop-blur backdrop-filter bg-darkblue border-b border-gray-800/80 font-medium sticky text-left text-xs top-0 tracking-wider uppercase'
+                                    className='bg-darkblue border-gray-800/80 sticky top-0 text-xs font-medium tracking-wider text-left uppercase border-b backdrop-filter backdrop-blur'
                                   >
                                     <div className='px-4 py-2 whitespace-nowrap md:py-3'>
                                       TX
@@ -1086,10 +1097,10 @@ const CoinDetails = () => {
                                 {exchangeHistoryDummy.map((item, index) => (
                                   <tr
                                     key={index}
-                                    className='divide-gray-800/80 divide-x text-gray-300 text-sm'
+                                    className='divide-gray-800/80 text-sm text-gray-300 divide-x'
                                   >
                                     <td
-                                      className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
+                                      className='border-gray-800/80 px-4 py-1 whitespace-nowrap bg-black border-b md:py-1.5'
                                       colSpan={1}
                                     >
                                       <div
@@ -1108,7 +1119,7 @@ const CoinDetails = () => {
                                       </div>
                                     </td>
                                     <td
-                                      className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
+                                      className='border-gray-800/80 px-4 py-1 whitespace-nowrap bg-black border-b md:py-1.5'
                                       colSpan={1}
                                     >
                                       <div
@@ -1122,7 +1133,7 @@ const CoinDetails = () => {
                                       </div>
                                     </td>
                                     <td
-                                      className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
+                                      className='border-gray-800/80 px-4 py-1 text-right whitespace-nowrap bg-black border-b md:py-1.5'
                                       colSpan={1}
                                     >
                                       <div
@@ -1136,7 +1147,7 @@ const CoinDetails = () => {
                                       </div>
                                     </td>
                                     <td
-                                      className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
+                                      className='border-gray-800/80 px-4 py-1 text-right whitespace-nowrap bg-black border-b md:py-1.5'
                                       colSpan={1}
                                     >
                                       <div
@@ -1150,7 +1161,7 @@ const CoinDetails = () => {
                                       </div>
                                     </td>
                                     <td
-                                      className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
+                                      className='border-gray-800/80 px-4 py-1 text-right whitespace-nowrap bg-black border-b md:py-1.5'
                                       colSpan={1}
                                     >
                                       <div
@@ -1164,7 +1175,7 @@ const CoinDetails = () => {
                                       </div>
                                     </td>
                                     <td
-                                      className='bg-black border-b border-gray-800/80 px-4 py-1 text-right whitespace-nowrap md:py-1.5'
+                                      className='border-gray-800/80 px-4 py-1 text-right whitespace-nowrap bg-black border-b md:py-1.5'
                                       colSpan={1}
                                     >
                                       <div
@@ -1178,13 +1189,13 @@ const CoinDetails = () => {
                                       </div>
                                     </td>
                                     <td
-                                      className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
+                                      className='border-gray-800/80 px-4 py-1 whitespace-nowrap bg-black border-b md:py-1.5'
                                       colSpan={1}
                                     >
                                       {item.address}
                                     </td>
                                     <td
-                                      className='bg-black border-b border-gray-800/80 px-4 py-1 whitespace-nowrap md:py-1.5'
+                                      className='border-gray-800/80 px-4 py-1 whitespace-nowrap bg-black border-b md:py-1.5'
                                       colSpan={1}
                                     >
                                       <a
@@ -1204,15 +1215,15 @@ const CoinDetails = () => {
                             </table>
                           </div>
                         </div>
-                        <div className='flex flex-1 items-center my-2 px-4 py-1 sm:flex-none md:my-4 md:px-0'>
-                          <div className='flex flex-1 items-center justify-center'>
+                        <div className='flex flex-1 items-center px-4 py-1 my-2 sm:flex-none md:px-0 md:my-4'>
+                          <div className='flex flex-1 justify-center items-center'>
                             <div>
                               <nav
-                                className='-space-x-px inline-flex relative rounded-md shadow-sm z-0'
+                                className='inline-flex relative z-0 -space-x-px rounded-md shadow-sm'
                                 aria-label='Pagination'
                               >
                                 <a
-                                  className='border border-gray-200 font-medium inline-flex items-center pl-2 pointer-events-none px-4 py-2 relative rounded-l-md text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
+                                  className='inline-flex relative items-center px-4 py-2 pl-2 text-sm font-medium text-gray-400 rounded-l-md border border-gray-200 pointer-events-none dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:bg-black dark:border-gray-800 hover:bg-gray-50'
                                   href='/history'
                                 >
                                   <svg
@@ -1220,7 +1231,7 @@ const CoinDetails = () => {
                                     viewBox='0 0 20 20'
                                     fill='currentColor'
                                     aria-hidden='true'
-                                    className='h-4 w-4'
+                                    className='w-4 h-4'
                                   >
                                     <path
                                       fillRule='evenodd'
@@ -1231,37 +1242,37 @@ const CoinDetails = () => {
                                   Prev
                                 </a>
                                 <a
-                                  className='bg-violet-50 border border-violet-500 font-medium inline-flex items-center pointer-events-none px-4 py-2 relative text-sm text-violet-600 z-10 dark:bg-gray-600 dark:border-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:text-gray-200 hover:bg-gray-50'
+                                  className='inline-flex relative z-10 items-center px-4 py-2 text-sm font-medium text-violet-600 bg-violet-50 border border-violet-500 pointer-events-none dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:text-gray-200 dark:bg-gray-600 dark:border-gray-300 hover:bg-gray-50'
                                   href='/history'
                                 >
                                   1
                                 </a>
                                 <a
-                                  className='border border-gray-200 font-medium inline-flex items-center px-4 py-2 relative text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
+                                  className='inline-flex relative items-center px-4 py-2 text-sm font-medium text-gray-400 border border-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:bg-black dark:border-gray-800 hover:bg-gray-50'
                                   href='/history'
                                 >
                                   2
                                 </a>
                                 <a
-                                  className='border border-gray-200 font-medium inline-flex items-center px-4 py-2 relative text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
+                                  className='inline-flex relative items-center px-4 py-2 text-sm font-medium text-gray-400 border border-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:bg-black dark:border-gray-800 hover:bg-gray-50'
                                   href='/history'
                                 >
                                   3
                                 </a>
                                 <a
-                                  className='border border-gray-200 font-medium inline-flex items-center pointer-events-none px-4 py-2 relative text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
+                                  className='inline-flex relative items-center px-4 py-2 text-sm font-medium text-gray-400 border border-gray-200 pointer-events-none dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:bg-black dark:border-gray-800 hover:bg-gray-50'
                                   href='/history'
                                 >
                                   ...
                                 </a>
                                 <a
-                                  className='border border-gray-200 font-medium inline-flex items-center px-4 py-2 relative text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
+                                  className='inline-flex relative items-center px-4 py-2 text-sm font-medium text-gray-400 border border-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:bg-black dark:border-gray-800 hover:bg-gray-50'
                                   href='/history'
                                 >
                                   10
                                 </a>
                                 <a
-                                  className='border border-gray-200 font-medium inline-flex items-center pr-2 px-4 py-2 relative rounded-r-md text-gray-400 text-sm dark:bg-black dark:border-gray-800 dark:hover:bg-gray-700 dark:hover:text-gray-300 hover:bg-gray-50'
+                                  className='inline-flex relative items-center px-4 py-2 pr-2 text-sm font-medium text-gray-400 rounded-r-md border border-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:bg-black dark:border-gray-800 hover:bg-gray-50'
                                   href='/history'
                                 >
                                   Next
@@ -1270,7 +1281,7 @@ const CoinDetails = () => {
                                     viewBox='0 0 20 20'
                                     fill='currentColor'
                                     aria-hidden='true'
-                                    className='h-4 w-4'
+                                    className='w-4 h-4'
                                   >
                                     <path
                                       fillRule='evenodd'
@@ -1291,7 +1302,7 @@ const CoinDetails = () => {
             </div>
             <div className='Toastify'></div>
           </main>
-          <div className='bg-black border-gray-800 border-t p-4 px-4 relative rounded-none text-gray-400 text-xs w-full md:text-sm'>
+          <div className='relative p-4 px-4 w-full text-xs text-gray-400 bg-black rounded-none border-t border-gray-800 md:text-sm'>
             <div className='hidden md:block'>
               ⚠️ Disclaimer: All content provided herein our website,
               hyperlinked sites, associated applications, forums, blogs, social
@@ -1327,7 +1338,7 @@ const CoinDetails = () => {
                 advisor before making any decision. No content on our Site is
                 meant to be a solicitation or offer.
               </p>
-              <button className='bg-black inline text-violet-400'>
+              <button className='inline text-violet-400 bg-black'>
                 Read more
               </button>
             </div>

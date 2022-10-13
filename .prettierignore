@@ -13,6 +13,9 @@
 /.next/
 /out/
 
+#css
+/src/styles/coinDetails.css
+
 # production
 /build
 
