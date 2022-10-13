@@ -1,4 +1,3 @@
-// import { autocomplete } from '@algolia/autocomplete-js';
 import { autocomplete } from '@algolia/autocomplete-js';
 import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
@@ -50,7 +49,7 @@ const CoinDetails = () => {
       className='hs-overlay hs-overlay-open:translate-x-0 max-w-100 z-[60] hidden fixed top-0 left-0 w-full h-full bg-white border-r transition-all duration-300 transform -translate-x-full dark:bg-gray-800 dark:border-gray-700'
       tabIndex={-1}
     >
-      <div id='__next'>
+      <div id='__next' className='main-layout'>
         <div className='flex sticky top-0 z-20 flex-col-reverse sm:flex-col'>
           <div className='h-[32px] flex sticky top-14 z-10 gap-2 justify-center items-center px-4 py-1.5 w-full text-xs text-gray-200 bg-gray-900 border-b border-gray-800 sm:top-0 sm:gap-4'>
             <button
@@ -117,7 +116,7 @@ const CoinDetails = () => {
               </div>
               <div
                 id='autocomplete'
-                className='relative ml-auto sm:ml-0 sm:w-80'
+                // className='ml-auto relative sm:ml-0 sm:w-80'
               ></div>
               <div className='ml-2 sm:block md:ml-4'>
                 <div className='flex space-x-4'>
@@ -126,9 +125,6 @@ const CoinDetails = () => {
                     href='https://www.geckoterminal.com/ethwars'
                   >
                     <span className='mr-2'>⚔️ ETH Wars</span>
-                    <span className='text-[7px] absolute top-0 right-1 p-0.5 leading-none text-white bg-red-500 rounded sm:hidden'>
-                      New
-                    </span>
                     <span className='inline-flex items-center px-2.5 py-1 text-xs font-medium leading-none text-red-100 bg-red-600 rounded-full sm:inline'>
                       New
                     </span>
@@ -166,7 +162,7 @@ const CoinDetails = () => {
                       data-nimg='future'
                     />
                   </div>
-                  <span className='max-w-[200px] xxs:hidden truncate'>
+                  <span className='max-w-[200px] hidden truncate'>
                     Avalanche
                   </span>
                 </div>
