@@ -4,7 +4,8 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false, //first: "strict": true, I updated
+    "noImplicitAny": false, //I added
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -18,7 +19,7 @@
       "@/*": ["*"],
       "@/public": ["../public"],
     },
-    "incremental": true
+    "incremental": true,
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/specificCoins/Chart/AreaChart.js"],
   "exclude": ["node_modules"],
